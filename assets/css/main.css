@@ -333,7 +333,7 @@ h3 {
 
 svg {
   width: 100%;
-  heigh: auto;
+  height: auto;
 }
 
 @media screen and (max-width: 650px) {

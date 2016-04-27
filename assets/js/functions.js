@@ -58,7 +58,7 @@ function clientStuff() {
   $('client-button').first().addClass('active-client');
   $('.clients-mobile-nav span').first().addClass('active-client');
 
-  $('.client-logo, .client-button').click(function() {
+  $('.client-logo, .client-button, .clients-mobile-nav span').click(function() {
     var $this = $(this),
         position = $this.parent().children().index($this);
 
