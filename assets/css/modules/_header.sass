@@ -1,7 +1,9 @@
 header
   height: 450px
-  background: url('../img/head-bg.jpg') center center
-  background-size: cover
+  @extend %background-image
+  background:
+    image: url('../img/logo.svg'), url('../img/head-bg.jpg')
+  padding-bottom: 50px
 
   .logo
     +size(50px)
@@ -52,7 +54,7 @@ header
 
 @media (max-width: 640px)
   header
-    // background:
+    background:
       position: 50% 20px, 50% 50%
     nav
       float: none
