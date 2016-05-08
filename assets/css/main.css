@@ -3339,6 +3339,12 @@ hr {
   height: 0;
 }
 
+h3 {
+  color: #E1C184;
+  text-align: center;
+  padding: 100px 0 30px;
+}
+
 header {
   height: 450px;
   background-image: url("../img/logo.svg"), url("../img/head-bg.jpg");
@@ -3449,18 +3455,6 @@ footer .lockup .content-wrap a:hover {
   color: rgba(0, 0, 0, 0.7);
 }
 
-h3 {
-  color: #E1C184;
-  text-align: center;
-  padding: 100px 0 30px;
-}
-
-@media screen and (max-width: 650px) {
-  h3 {
-    padding: 50px 0 50px;
-  }
-}
-
 .face-lockup {
   max-width: 780px;
   display: -webkit-box;
@@ -3492,12 +3486,12 @@ h3 {
 }
 
 .face-lockup .face-image {
-  max-width: 200px;
-  height: 200px;
-  width: 200px;
-  background-image: url("/assets/img/face.jpg");
+  border-radius: 50%;
   background-size: cover;
   background-position: center;
+  background-image: url(../img/face.jpg);
+  height: 200px;
+  width: 200px;
   -webkit-box-ordinal-group: 3;
   -moz-box-ordinal-group: 3;
   box-ordinal-group: 3;
@@ -3570,25 +3564,24 @@ h3 {
     display: block;
     background-position: center center;
     background-repeat: no-repeat;
-    width: auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
   }
   .face-lockup [class^="icon-"] {
-    margin: 10px;
+    margin: 10px 9%;
   }
 }
 
 .blurb {
   max-width: 620px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 50px auto;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 24px;
   text-align: center;
+  font-weight: 300;
 }
 
 .skill-lockup {
-  max-width: 700px;
+  max-width: 540px;
   margin: 100px auto;
   color: #999;
 }
@@ -3600,13 +3593,13 @@ h3 {
 }
 
 .skill-lockup .skill-unit {
-  width: 350px;
+  width: 270px;
   float: left;
 }
 
 .skill-lockup .skill-icons {
   font-size: 0;
-  margin: 2px 0 30px;
+  margin: 3px 0 30px;
 }
 
 .skill-lockup .skill-icons span {
@@ -3614,7 +3607,7 @@ h3 {
   height: 14px;
   width: 14px;
   background-color: #C99065;
-  margin-right: 5px;
+  margin-right: 8px;
   border-radius: 50%;
 }
 
@@ -3628,17 +3621,17 @@ h3 {
   margin: 2px;
 }
 
-@media screen and (max-width: 650px) {
-  .skill-lockup {
-    width: 270px;
-  }
-  .face-image {
-    margin: 0 auto;
-  }
-}
-
 .skill-lockup .skill-icons.skill-1 span:nth-child(n+2), .skill-lockup .skill-icons.skill-2 span:nth-child(n+3), .skill-lockup .skill-icons.skill-3 span:nth-child(n+4), .skill-lockup .skill-icons.skill-4 span:nth-child(n+5), .skill-lockup .skill-icons.skill-5 span:nth-child(n+6), .skill-lockup .skill-icons.skill-6 span:nth-child(n+7), .skill-lockup .skill-icons.skill-7 span:nth-child(n+8), .skill-lockup .skill-icons.skill-8 span:nth-child(n+9), .skill-lockup .skill-icons.skill-9 span:nth-child(n+10), .skill-lockup .skill-icons.skill-10 span:nth-child(n+11) {
   background: #E5EAEE;
+}
+
+@media screen and (max-width: 541px) {
+  .skill-lockup {
+    width: 220px;
+  }
+  .skill-lockup .skill-unit {
+    width: 220px;
+  }
 }
 
 .section-work {
@@ -4115,11 +4108,13 @@ h3 {
   line-height: 1;
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 form {
   max-width: 450px;
-  margin: 0 auto 50px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
 }
 
 form input, form textarea {
@@ -4129,11 +4124,18 @@ form input, form textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
+  appearance: none;
+  font-size: 16px;
 }
 
 form input:focus, form textarea:focus {
   outline: none;
   border-color: #E1C184;
+}
+
+form textarea {
+  height: 10em;
+  resize: none;
 }
 
 form .submit-wrap {
@@ -4152,10 +4154,6 @@ form [type="submit"]:hover {
   background: #E1C184;
 }
 
-form textarea {
-  height: 10em;
-}
-
 form .contact-info-group label {
   width: 50%;
   float: left;
@@ -4165,11 +4163,11 @@ form .contact-info-group label {
 }
 
 form .contact-info-group label:nth-child(1) {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 form .contact-info-group label:nth-child(2) {
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 form label {
@@ -4179,4 +4177,19 @@ form label {
 
 form label span {
   display: block;
+}
+
+@media (max-width: 541px) {
+  form .contact-info-group label {
+    width: 100%;
+  }
+  form .contact-info-group label:nth-child(1) {
+    padding: 0;
+  }
+  form .contact-info-group label:nth-child(2) {
+    padding: 0;
+  }
+  form [type="submit"] {
+    width: 100%;
+  }
 }
